@@ -227,8 +227,9 @@ header.sticky{
     font-size: var(--h2-font);
 }
 .services-content{
-    display: flex;
-    grid-template-columns: (autofit, minmax(300px, auto));
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat (autofit, minmax(300px, auto));
     align-items: center;
     gap: 2.2rem;
     margin-top: 4.2rem;
