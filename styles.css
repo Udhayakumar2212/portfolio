@@ -229,8 +229,10 @@ header.sticky{
 .services-content{
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: repeat (autofit, minmax(300px, auto));
-    align-items: center;
+    /* grid-template-columns: 30% 30% 30%; */
+    /* align-items: center;
+    justify-content: center; */
+    grid-template-columns: repeat(autofit, minmax(300px, auto));
     gap: 2.2rem;
     margin-top: 4.2rem;
 }
