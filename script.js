@@ -4,10 +4,25 @@ window.addEventListener ("scroll", function() {
     header.classList.toggle ("sticky", window.scrollY >120);
 });
 
+
+let menu = document.querySelector('#menu-icon');
+let navlist = document.querySelector('.navlist');
+
+menu.onclick = () =>{
+  menu.classList.toggle('bx-x');
+  navlist.classList.toggle('active');
+}
+
+window.onscroll = () =>{
+  menu.classList.remove('bx-x');
+  navlist.classList.remove('active');
+}
+
 const form = document.querySelector("form");
 const fullName = document.getElementById("name");
 const email = document.getElementById("email");
 const mess = document.getElementById("message");
+
 
 function sendEmail() {
     const bodyMessage = `Full Name: ${fullName.value}<br>Email: ${email.value}<br>Message: ${mess.value}`;
